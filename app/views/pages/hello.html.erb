@@ -1,0 +1,32 @@
+<h1>Cześć, <%= @user.name %></h1>
+<h3>Jest <%= @czas %></h3>
+
+<h3>Moje miasto to <%= @user.city %> </h3>
+<h3>Moje ulubione rzeczy</h3>
+<h3>Masz <%= @user.age %> lat </h3>
+
+
+
+<ul>
+  <% @rzeczy_ktore_lubie.each do |rzecz| %>
+   <li><%= rzecz %></li>
+  <% end %>
+</ul>
+
+
+
+<h3>Moje ulubione płyty</h3>
+
+<ul>
+  <% @user.albums.each do |plyta| %>
+   <li><%= "Tytuł: #{plyta[:tytul]}, Autor: #{plyta[:autor]}" %></li>
+  <% end %>
+</ul>
+
+<h3>Taka se lista</h4>
+<ul>
+   <li>Pierwszy element</li>
+   <li>Drugi element</li>
+   <li>i tak dalej...</li>
+</ul>
+
